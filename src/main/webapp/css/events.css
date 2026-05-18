@@ -1,0 +1,35 @@
+/* events.css — dark hero strip for the dedicated events page */
+
+body.events-body { background: #0f0f1a; }
+
+.events-hero {
+  background: #0f0f1a;
+  padding: 48px 60px 32px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.events-hero h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #ffffff !important;
+  margin-bottom: 12px;
+  line-height: 1.1;
+}
+
+.events-hero p {
+  color: #94a3b8 !important;
+  font-size: 1rem;
+}
+
+.results-count {
+  color: #94a3b8;
+  font-size: 0.88rem;
+  margin-bottom: 20px;
+}
+.results-count strong { color: #f1f5f9; }
+
+@media (max-width: 768px) {
+  .events-hero { padding: 40px 20px 28px; }
+  .events-hero h1 { font-size: 1.8rem; }
+}

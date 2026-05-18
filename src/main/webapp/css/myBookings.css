@@ -1,0 +1,96 @@
+/* myBookings.css — dark theme */
+
+body {
+  background: #0f0f1a;
+  color: #e2e8f0;
+}
+
+.page-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 32px;
+}
+
+.page-header { margin-bottom: 32px; }
+.page-header h1 { font-size: 2rem; color: #fff; }
+.page-header p  { color: #94a3b8; margin-top: 4px; }
+
+.table-wrap { overflow-x: auto; }
+
+.bookings-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1a1a2e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+}
+.bookings-table th,
+.bookings-table td {
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 0.9rem;
+}
+.bookings-table thead {
+  background: #0f0f1a;
+  color: #94a3b8;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.bookings-table td { color: #cbd5e1; }
+.bookings-table tbody tr:hover { background: rgba(255,255,255,0.04); }
+.bookings-table tbody tr:not(:last-child) td {
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.empty-msg {
+  text-align: center;
+  padding: 40px;
+  color: #64748b;
+}
+.empty-msg a { color: #5b8dee; }
+
+/* Status badges */
+.status-badge, .payment-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.status-PENDING   { background: rgba(251,191,36,0.15);  color: #fbbf24; }
+.status-CONFIRMED { background: rgba(52,211,153,0.15);  color: #34d399; }
+.status-CANCELLED { background: rgba(239,68,68,0.15);   color: #f87171; }
+.payment-UNPAID   { background: rgba(239,68,68,0.15);   color: #f87171; }
+.payment-PAID     { background: rgba(52,211,153,0.15);  color: #34d399; }
+
+.alert-error {
+  background: rgba(239,68,68,0.12);
+  color: #f87171;
+  border: 1px solid rgba(239,68,68,0.3);
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.back-link-wrap { margin-top: 32px; }
+.btn-back {
+  display: inline-block;
+  background: #1a1a2e;
+  color: #cbd5e1;
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 11px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-back:hover { background: rgba(255,255,255,0.06); color: #fff; }
+
+@media (max-width: 600px) {
+  .page-wrap { padding: 32px 16px; }
+}

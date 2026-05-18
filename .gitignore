@@ -1,0 +1,19 @@
+# Maven build output
+target/
+
+# Eclipse project files
+.classpath
+.project
+.settings/
+bin/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Uploaded files at runtime (not source code)
+src/main/webapp/uploads/
+
+# OS files
+.DS_Store
+Thumbs.db

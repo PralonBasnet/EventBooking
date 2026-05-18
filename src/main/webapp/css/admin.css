@@ -1,0 +1,366 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.admin-body {
+  display: flex;
+  min-height: 100vh;
+  background: #F3F4F6;
+  color: #111827;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* sidebar */
+.sidebar {
+  width: 240px;
+  background: #111827;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 100;
+  padding-bottom: 24px;
+}
+
+.sidebar-brand {
+  padding: 24px 20px 20px;
+  border-bottom: 1px solid #374151;
+  margin-bottom: 12px;
+}
+
+.brand-name {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.brand-sub {
+  display: block;
+  font-size: 0.65rem;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 2px;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 0 12px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 14px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: #9CA3AF;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background: #1F2937;
+  color: #FFFFFF;
+}
+
+.nav-item i {
+  width: 18px;
+}
+
+.main-content {
+  margin-left: 240px;
+  flex: 1;
+  min-height: 100vh;
+}
+
+.topbar {
+  height: 64px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E5E7EB;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 28px;
+}
+
+.page-header {
+  padding: 28px 28px 0;
+}
+
+.greeting {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.greeting-sub {
+  color: #6B7280;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* ── KPI stats grid — Bug 9: auto-fit so 3 or 4 cards both work ── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 24px 28px;
+}
+
+.stat-card {
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 22px 24px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.stat-icon {
+  font-size: 2rem;
+  color: #2563EB;
+  width: 48px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.stat-info {
+  flex: 1;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 4px 0 0;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 0 28px 28px;
+}
+
+/* upcoming events card list */
+.upcoming-events {
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.section-header h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.view-all {
+  font-size: 0.8rem;
+  color: #2563EB;
+}
+
+.event-card {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+
+.event-card-info {
+  flex: 1;
+}
+
+.event-type-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: #2563EB;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.event-venue-name {
+  font-size: 0.85rem;
+  color: #374151;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.event-venue-name i {
+  color: #6B7280;
+  margin-right: 4px;
+}
+
+.event-date {
+  font-size: 0.82rem;
+  color: #6B7280;
+  margin-bottom: 4px;
+}
+
+.event-price {
+  font-size: 0.82rem;
+  color: #6B7280;
+  margin-bottom: 10px;
+}
+
+.event-card-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn-edit-sm {
+  background: #DBEAFE;
+  color: #2563EB;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.btn-edit-sm:hover {
+  background: #BFDBFE;
+}
+
+.btn-create-event {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background: #111827;
+  color: #FFFFFF;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.btn-create-event:hover {
+  background: #1F2937;
+}
+
+.empty-msg {
+  text-align: center;
+  color: #6B7280;
+  font-size: 0.875rem;
+}
+
+/* alert within dashboard (dashboardError) */
+.alert {
+  padding: 10px 28px;
+  font-size: 0.875rem;
+}
+.alert-error {
+  color: #991B1B;
+}
+
+/* ── Shared table styles (reports, manageBookings) ── */
+.table-wrap {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead {
+  background: #F9FAFB;
+}
+
+.table th {
+  padding: 12px 16px;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6B7280;
+  border-bottom: 1px solid #E5E7EB;
+  text-align: left;
+}
+
+.table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #E5E7EB;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.table tbody tr:hover {
+  background: #F9FAFB;
+}
+
+.msg {
+  margin: 0 28px 20px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+}
+
+.msg.success {
+  background: #D1FAE5;
+  color: #065F46;
+}
+
+.msg.error {
+  background: #FEE2E2;
+  color: #991B1B;
+}
+
+/* colored status/payment badges for manageBookings */
+.status-badge,
+.payment-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-PENDING   { background: #FEF3C7; color: #92400E; }
+.status-CONFIRMED { background: #D1FAE5; color: #065F46; }
+.status-CANCELLED { background: #FEE2E2; color: #991B1B; }
+
+.payment-PAID   { background: #DBEAFE; color: #1E40AF; }
+.payment-UNPAID { background: #F3F4F6; color: #6B7280; }
+
+@media (max-width: 768px) {
+  .main-content { margin-left: 0; padding: 16px; }
+  .stats-grid   { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .dashboard-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: 1fr; }
+}
