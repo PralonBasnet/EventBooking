@@ -7,16 +7,6 @@
 
     <display-name>EventBooking</display-name>
 
-    <!--
-        ══════════════════════════════════════════════════════════
-        FILTERS
-        Both filters are registered HERE ONLY.
-        Neither AuthenticationFilter nor GuestFilter carries a
-        @WebFilter annotation — that caused double-registration in
-        the original zip, making every filter run twice per request.
-        ══════════════════════════════════════════════════════════
-    -->
-
     <!-- AuthenticationFilter — protects all routes that require login -->
     <filter>
         <filter-name>AuthenticationFilter</filter-name>
@@ -62,8 +52,6 @@
     <!--
         GuestFilter — redirects already-logged-in users away from
         login and register pages.
-        Fix: original used /login and /register (lowercase) which
-        never matched the @WebServlet patterns /Login and /Register.
     -->
     <filter>
         <filter-name>GuestFilter</filter-name>

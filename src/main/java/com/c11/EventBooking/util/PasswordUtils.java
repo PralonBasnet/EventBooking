@@ -2,7 +2,7 @@ package com.c11.EventBooking.util;
 
 import org.mindrot.jbcrypt.BCrypt;
 
-/** BCrypt password utility. */
+//BCrypt Password Utility
 public class PasswordUtils {
 
     // 10 rounds (2^10 iterations) — standard cost factor for BCrypt

@@ -112,7 +112,7 @@ VALUES
      '123456',
      0),
 
-    ('Anubhav Pradhan',
+    ('Anubhavi Pradhan',
      'Anu',
      '9800000003',
      '2000-09-23',
