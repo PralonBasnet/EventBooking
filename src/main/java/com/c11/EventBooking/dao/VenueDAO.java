@@ -10,10 +10,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-/** DAO for the {@code venue} table. */
+// DAO for the {@code venue} table. 
 public class VenueDAO {
 
-    // ── helper ───────────────────────────────────────────────────────────────
+    //helper
 
     private VenueModel mapRow(ResultSet rs) throws SQLException {
         VenueModel v = new VenueModel();
@@ -25,7 +25,7 @@ public class VenueDAO {
         return v;
     }
 
-    // ── CREATE ───────────────────────────────────────────────────────────────
+    //CREATE 
 
     public int insertVenue(VenueModel venue) throws SQLException {
         String sql = "INSERT INTO venue "
@@ -43,7 +43,7 @@ public class VenueDAO {
         }
     }
 
-    // ── READ ─────────────────────────────────────────────────────────────────
+    //READ
 
     public List<VenueModel> getAllVenues() throws SQLException {
         List<VenueModel> list = new ArrayList<>();
@@ -73,7 +73,7 @@ public class VenueDAO {
         }
     }
 
-    // ── UPDATE ───────────────────────────────────────────────────────────────
+    // UPDATE 
 
     public int updateVenue(VenueModel venue) throws SQLException {
         String sql = "UPDATE venue "
@@ -92,7 +92,7 @@ public class VenueDAO {
         }
     }
 
-    // ── DELETE (soft) ─────────────────────────────────────────────────────────
+    //DELETE (soft)
 
     // soft-delete: isDeleted=1 avoids triggering the FK constraint on event.venueID
     public int deleteVenue(int venueID) throws SQLException {

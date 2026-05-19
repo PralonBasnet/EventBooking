@@ -10,10 +10,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-/** DAO for the {@code event} table. */
+// DAO for the {@code event} table. 
 public class EventDAO {
 
-    // ── helper ───────────────────────────────────────────────────────────────
+    //helper 
 
     private EventModel mapRow(ResultSet rs) throws SQLException {
         EventModel e = new EventModel();
@@ -27,7 +27,7 @@ public class EventDAO {
         return e;
     }
 
-    // ── CREATE ───────────────────────────────────────────────────────────────
+    //CREATE
 
     public int insertEvent(EventModel event) throws SQLException {
         String sql = "INSERT INTO event "
@@ -46,7 +46,7 @@ public class EventDAO {
         }
     }
 
-    // ── READ ─────────────────────────────────────────────────────────────────
+    //READ 
 
     public List<EventModel> getAllEvents() throws SQLException {
         List<EventModel> list = new ArrayList<>();
@@ -149,7 +149,7 @@ public class EventDAO {
         return list;
     }
 
-    // ── UPDATE ───────────────────────────────────────────────────────────────
+    //UPDATE 
 
     public int updateEvent(EventModel event) throws SQLException {
         String sql = "UPDATE event "
@@ -170,7 +170,7 @@ public class EventDAO {
         }
     }
 
-    // ── DELETE (soft) ─────────────────────────────────────────────────────────
+    //DELETE (soft)
 
     // soft-delete preserves linked bookings for audit purposes
     public int deleteEvent(int eventID) throws SQLException {
