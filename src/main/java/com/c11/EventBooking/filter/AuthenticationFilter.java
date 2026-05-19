@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-/** Guards authenticated routes and enforces role-based access. */
+// Guards authenticated routes and enforces role-based access. 
 public class AuthenticationFilter extends HttpFilter {
 
     private static final long serialVersionUID = 1L;

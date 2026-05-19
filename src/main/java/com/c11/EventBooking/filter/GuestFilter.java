@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-/** Redirects already-logged-in users away from the login and register pages. */
+// Redirects already-logged-in users away from the login and register pages. 
 public class GuestFilter extends HttpFilter {
 
     private static final long serialVersionUID = 1L;
