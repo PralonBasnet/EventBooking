@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/** Handles user registration. */
+// Handles user registration. 
 @WebServlet("/Register")
 public class RegisterServlet extends HttpServlet {
 

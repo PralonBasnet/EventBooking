@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/** Handles the login and session creation flow. */
+// Handles the login and session creation flow. 
 @WebServlet("/Login")
 public class LoginServlet extends HttpServlet {
 

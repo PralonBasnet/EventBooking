@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-/** Invalidates the session and redirects to the home page. */
+// Invalidates the session and redirects to the home page
 @WebServlet("/Logout")
 public class LogoutServlet extends HttpServlet {
 
