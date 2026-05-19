@@ -1,11 +1,11 @@
-@charset "UTF-8";
-
+/* Reset default browser spacing and apply consistent box sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Main admin page layout styling */
 body.admin-body {
   display: flex;
   min-height: 100vh;
@@ -14,12 +14,13 @@ body.admin-body {
   font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
 }
 
+/* Remove default underline from links */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* sidebar */
+/* Sidebar container */
 .sidebar {
   width: 240px;
   background: #111827;
@@ -33,12 +34,14 @@ a {
   padding-bottom: 24px;
 }
 
+/* Branding/logo section inside sidebar */
 .sidebar-brand {
   padding: 24px 20px 20px;
   border-bottom: 1px solid #374151;
   margin-bottom: 12px;
 }
 
+/* Main brand name */
 .brand-name {
   display: block;
   font-size: 1.25rem;
@@ -46,6 +49,7 @@ a {
   color: #FFFFFF;
 }
 
+/* Small subtitle below brand name */
 .brand-sub {
   display: block;
   font-size: 0.65rem;
@@ -55,11 +59,13 @@ a {
   margin-top: 2px;
 }
 
+/* Navigation section inside sidebar */
 .sidebar-nav {
   flex: 1;
   padding: 0 12px;
 }
 
+/* Individual navigation item */
 .nav-item {
   display: flex;
   align-items: center;
@@ -70,22 +76,26 @@ a {
   color: #9CA3AF;
 }
 
+/* Hover and active state for navigation items */
 .nav-item:hover,
 .nav-item.active {
   background: #1F2937;
   color: #FFFFFF;
 }
 
+/* Navigation icons */
 .nav-item i {
   width: 18px;
 }
 
+/* Main content area beside sidebar */
 .main-content {
   margin-left: 240px;
   flex: 1;
   min-height: 100vh;
 }
 
+/* Top navigation bar */
 .topbar {
   height: 64px;
   background: #FFFFFF;
@@ -96,22 +106,25 @@ a {
   padding: 0 28px;
 }
 
+/* Dashboard page header */
 .page-header {
   padding: 28px 28px 0;
 }
 
+/* Main greeting title */
 .greeting {
   font-size: 1.75rem;
   font-weight: 700;
 }
 
+/* Small subtitle under greeting */
 .greeting-sub {
   color: #6B7280;
   font-size: 0.9rem;
   margin-top: 4px;
 }
 
-/* ── KPI stats grid — Bug 9: auto-fit so 3 or 4 cards both work ── */
+/* Dashboard statistics card grid */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -119,6 +132,7 @@ a {
   padding: 24px 28px;
 }
 
+/* Individual statistics card */
 .stat-card {
   background: #FFFFFF;
   border-radius: 10px;
@@ -129,6 +143,7 @@ a {
   gap: 16px;
 }
 
+/* Icon inside statistics card */
 .stat-icon {
   font-size: 2rem;
   color: #2563EB;
@@ -137,10 +152,12 @@ a {
   flex-shrink: 0;
 }
 
+/* Text section inside stat card */
 .stat-info {
   flex: 1;
 }
 
+/* Label text for stat card */
 .stat-label {
   font-size: 0.7rem;
   color: #6B7280;
@@ -148,12 +165,14 @@ a {
   letter-spacing: 1px;
 }
 
+/* Main number displayed in stat card */
 .stat-value {
   font-size: 1.8rem;
   font-weight: 700;
   margin: 4px 0 0;
 }
 
+/* Main dashboard content layout */
 .dashboard-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -161,7 +180,7 @@ a {
   padding: 0 28px 28px;
 }
 
-/* upcoming events card list */
+/* Upcoming events section container */
 .upcoming-events {
   background: #FFFFFF;
   border-radius: 10px;
@@ -169,22 +188,26 @@ a {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
 }
 
+/* Section heading area */
 .section-header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 
+/* Section title */
 .section-header h3 {
   font-size: 1rem;
   font-weight: 700;
 }
 
+/* View all link */
 .view-all {
   font-size: 0.8rem;
   color: #2563EB;
 }
 
+/* Event card design */
 .event-card {
   display: flex;
   gap: 16px;
@@ -194,10 +217,12 @@ a {
   margin-bottom: 14px;
 }
 
+/* Event information section */
 .event-card-info {
   flex: 1;
 }
 
+/* Event category/type badge */
 .event-type-badge {
   display: inline-block;
   font-size: 0.65rem;
@@ -209,6 +234,7 @@ a {
   margin-bottom: 8px;
 }
 
+/* Venue name styling */
 .event-venue-name {
   font-size: 0.85rem;
   color: #374151;
@@ -216,29 +242,34 @@ a {
   margin-bottom: 4px;
 }
 
+/* Venue icon styling */
 .event-venue-name i {
   color: #6B7280;
   margin-right: 4px;
 }
 
+/* Event date text */
 .event-date {
   font-size: 0.82rem;
   color: #6B7280;
   margin-bottom: 4px;
 }
 
+/* Event price text */
 .event-price {
   font-size: 0.82rem;
   color: #6B7280;
   margin-bottom: 10px;
 }
 
+/* Buttons section inside event card */
 .event-card-actions {
   display: flex;
   gap: 12px;
   align-items: center;
 }
 
+/* Small edit button */
 .btn-edit-sm {
   background: #DBEAFE;
   color: #2563EB;
@@ -248,10 +279,12 @@ a {
   font-weight: 600;
 }
 
+/* Hover effect for edit button */
 .btn-edit-sm:hover {
   background: #BFDBFE;
 }
 
+/* Create event button */
 .btn-create-event {
   display: inline-block;
   margin-top: 10px;
@@ -263,26 +296,30 @@ a {
   font-weight: 600;
 }
 
+/* Hover effect for create event button */
 .btn-create-event:hover {
   background: #1F2937;
 }
 
+/* Message shown when no data is available */
 .empty-msg {
   text-align: center;
   color: #6B7280;
   font-size: 0.875rem;
 }
 
-/* alert within dashboard (dashboardError) */
+/* Dashboard alert message styling */
 .alert {
   padding: 10px 28px;
   font-size: 0.875rem;
 }
+
+/* Error alert style */
 .alert-error {
   color: #991B1B;
 }
 
-/* ── Shared table styles (reports, manageBookings) ── */
+/* Shared table container */
 .table-wrap {
   background: #fff;
   border-radius: 8px;
@@ -290,15 +327,18 @@ a {
   box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
 
+/* Table base styling */
 .table {
   width: 100%;
   border-collapse: collapse;
 }
 
+/* Table header background */
 .table thead {
   background: #F9FAFB;
 }
 
+/* Table heading cells */
 .table th {
   padding: 12px 16px;
   font-size: 0.72rem;
@@ -309,6 +349,7 @@ a {
   text-align: left;
 }
 
+/* Table body cells */
 .table td {
   padding: 12px 16px;
   border-bottom: 1px solid #E5E7EB;
@@ -316,10 +357,12 @@ a {
   color: #374151;
 }
 
+/* Hover effect for table rows */
 .table tbody tr:hover {
   background: #F9FAFB;
 }
 
+/* Success and error message box */
 .msg {
   margin: 0 28px 20px;
   padding: 12px 16px;
@@ -327,17 +370,19 @@ a {
   font-size: 0.875rem;
 }
 
+/* Success message styling */
 .msg.success {
   background: #D1FAE5;
   color: #065F46;
 }
 
+/* Error message styling */
 .msg.error {
   background: #FEE2E2;
   color: #991B1B;
 }
 
-/* colored status/payment badges for manageBookings */
+/* Shared badge design */
 .status-badge,
 .payment-badge {
   display: inline-block;
@@ -349,18 +394,23 @@ a {
   letter-spacing: 0.05em;
 }
 
+/* Booking status colors */
 .status-PENDING   { background: #FEF3C7; color: #92400E; }
 .status-CONFIRMED { background: #D1FAE5; color: #065F46; }
 .status-CANCELLED { background: #FEE2E2; color: #991B1B; }
 
+/* Payment status colors */
 .payment-PAID   { background: #DBEAFE; color: #1E40AF; }
 .payment-UNPAID { background: #F3F4F6; color: #6B7280; }
 
+/* Tablet responsive design */
 @media (max-width: 768px) {
   .main-content { margin-left: 0; padding: 16px; }
   .stats-grid   { grid-template-columns: 1fr 1fr; gap: 12px; }
   .dashboard-grid { grid-template-columns: 1fr; }
 }
+
+/* Mobile responsive design */
 @media (max-width: 480px) {
   .stats-grid { grid-template-columns: 1fr; }
 }

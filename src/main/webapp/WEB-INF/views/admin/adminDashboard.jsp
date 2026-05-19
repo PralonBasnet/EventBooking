@@ -13,7 +13,7 @@
 <c:set var="activeNav" value="dashboard" scope="request"/>
 <%@ include file="/WEB-INF/views/includes/navbar-admin.jspf" %>
 
-<!-- MAIN CONTENT -->
+ <!-- Main -->
 <main class="main-content">
 
   <header class="topbar">
@@ -31,7 +31,7 @@
     <div class="alert alert-error"><c:out value="${dashboardError}"/></div>
   </c:if>
 
-  <!-- KPI CARDS -->
+  <!-- KPI -->
   <section class="stats-grid">
     <div class="stat-card">
       <div class="stat-icon">&#128197;</div>
@@ -66,7 +66,7 @@
     </div>
   </section>
 
-  <!-- UPCOMING EVENTS -->
+  <!-- Upcoming Events -->
   <section class="dashboard-grid">
     <div class="upcoming-events">
       <div class="section-header">

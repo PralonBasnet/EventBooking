@@ -14,15 +14,20 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-/**
-  Serves the admin dashboard page.
- 
- Sets four request attributes before forwarding:
-   totalEvents    (int)              — KPI card
-   totalBookings  (int)              — KPI card
-   totalUsers     (int)              — KPI card (Bug 9)
-   upcomingEvents (List<EventModel>) — upcoming events panel with venueName (Bug 10)
+/*
+ * AdminDashboardServlet
+ *
+ * This servlet is responsible for loading the Admin Dashboard page.
+ * It collects important dashboard data from the database using DAO classes
+ * and forwards the information to adminDashboard.jsp.
+ *
+ * Main features:
+ * - Displays total number of events
+ * - Displays total bookings made
+ * - Displays total registered users
+ * - Loads upcoming event details for the dashboard panel
  */
+
 @WebServlet("/admin/dashboard")
 public class AdminDashboardServlet extends HttpServlet {
 
