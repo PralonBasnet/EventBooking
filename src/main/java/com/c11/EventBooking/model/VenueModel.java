@@ -2,7 +2,7 @@ package com.c11.EventBooking.model;
 
 import java.io.Serializable;
 
-//POJO for the {@code venue} table. */
+//POJO for the {@code venue} table. 
 public class VenueModel implements Serializable {
 
     private static final long serialVersionUID = 1L;
