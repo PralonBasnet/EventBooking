@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* reset default browser styles */
+/*reset default browser styles */
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +20,7 @@ a {
   color: inherit;
 }
 
-/* sidebar styles */
+/*sidebar styles*/ 
 .sidebar {
   width: 240px;
   background: #111827;
