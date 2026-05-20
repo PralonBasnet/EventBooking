@@ -5,8 +5,7 @@ import com.c11.EventBooking.model.UserModel;
 import com.c11.EventBooking.util.PasswordUtils;
 
 import java.sql.SQLException;
-
-/** Business logic for user registration. */
+// Business logic for user registration
 public class RegisterService {
 
     private final UserDAO userDAO = new UserDAO();

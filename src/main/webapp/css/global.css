@@ -52,11 +52,11 @@ a.nav-brand-link:hover {
   color: #5b8dee !important;
 }
 
-/* responsive images — don't let max-width break fixed-size avatars */
+/* responsive images*/
 img { display: block; }
 img:not(.nav-avatar-img) { max-width: 100%; }
 
-/* dark page body class — used by myBookings, wishlist, bookingConfirm */
+/* dark page body class*/
 body.dark-page {
   background: #0f0f1a;
   color: #cbd5e1;

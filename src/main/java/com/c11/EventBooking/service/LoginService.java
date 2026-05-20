@@ -6,7 +6,7 @@ import com.c11.EventBooking.util.PasswordUtils;
 
 import java.sql.SQLException;
 
-/** Business logic for user authentication. */
+// Business logic for user authentication
 public class LoginService {
 
     private final UserDAO userDAO = new UserDAO();

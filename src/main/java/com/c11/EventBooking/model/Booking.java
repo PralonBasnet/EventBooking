@@ -2,7 +2,7 @@ package com.c11.EventBooking.model;
 
 import java.io.Serializable;
 
-//POJO for the {@code booking} table. 
+// POJO for the table. 
 public class Booking implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -15,7 +15,7 @@ public class Booking implements Serializable {
     private double totalAmount;
     private String paymentStatus;
 
-    //display-only, populated from JOIN; not in the booking table
+    // display-only, populated from JOIN; not in the booking table
     private String eventType;
     private String eventDate;
     private String eventTime;

@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-/** Admin user management controller. */
+// Admin user management controller.
 @WebServlet("/admin/users")
 public class UserManagementServlet extends HttpServlet {
 

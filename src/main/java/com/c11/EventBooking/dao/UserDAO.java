@@ -10,10 +10,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-/** DAO for the {@code user} table. */
+
 public class UserDAO {
 
-    // ── helper ───────────────────────────────────────────────────────────────
+   
 
     private UserModel mapRow(ResultSet rs) throws SQLException {
         UserModel u = new UserModel();
@@ -30,7 +30,7 @@ public class UserDAO {
         return u;
     }
 
-    // ── CREATE ───────────────────────────────────────────────────────────────
+
 
     // inserts with PENDING status and USER role; admin activates the account before first login
     public int registerUser(UserModel user) throws SQLException {
@@ -51,7 +51,7 @@ public class UserDAO {
         }
     }
 
-    // ── READ ─────────────────────────────────────────────────────────────────
+    // Read
 
     public UserModel loginUser(String username) throws SQLException {
         String sql = "SELECT * FROM `user` WHERE userName = ? AND isDeleted = 0";
@@ -105,7 +105,7 @@ public class UserDAO {
         }
     }
 
-    // ── DUPLICATE CHECKS ─────────────────────────────────────────────────────
+    // Duplicate Checks
 
     // includes soft-deleted accounts to prevent username reuse
     public boolean usernameExists(String username) throws SQLException {
@@ -135,7 +135,7 @@ public class UserDAO {
         }
     }
 
-    // ── UPDATE ───────────────────────────────────────────────────────────────
+   // Update
 
     public int updateUser(int userID, String fullName, String userName,
                           String contactNumber, String email, String dateOfBirth) throws SQLException {
@@ -221,7 +221,7 @@ public class UserDAO {
         }
     }
 
-    /** True if the username is taken by any user OTHER than excludeUserID. */
+    // True if the username is taken by any user OTHER than excludeUserID.
     public boolean usernameExistsForOther(String username, int excludeUserID) throws SQLException {
         String sql = "SELECT userID FROM `user` WHERE userName=? AND userID<>?";
 
@@ -236,7 +236,7 @@ public class UserDAO {
         }
     }
 
-    /** True if the email is taken by any user OTHER than excludeUserID. */
+    // True if the email is taken by any user OTHER than excludeUserID.
     public boolean emailExistsForOther(String email, int excludeUserID) throws SQLException {
         String sql = "SELECT userID FROM `user` WHERE email=? AND userID<>?";
 
