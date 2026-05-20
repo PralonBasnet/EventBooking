@@ -1,7 +1,7 @@
 /* bookingConfirm.css */
 
 body.dark-page { background: #0f0f1a; }
-
+/* full-height centering wrapper*/
 .confirm-wrap {
   min-height: calc(100vh - 64px);
   background: #0f0f1a;
@@ -20,7 +20,7 @@ body.dark-page { background: #0f0f1a; }
   max-width: 520px;
   width: 100%;
 }
-
+/* green circle checkmark icon */
 .confirm-icon {
   width: 72px;
   height: 72px;
@@ -41,7 +41,7 @@ body.dark-page { background: #0f0f1a; }
   margin-bottom: 8px;
 }
 .confirm-sub { color: #94a3b8; margin-bottom: 36px; font-size: 0.95rem; }
-
+/* frosted detail block */
 .confirm-details {
   background: rgba(255,255,255,0.04);
   border-radius: 12px;
