@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+         https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <display-name>EventBooking</display-name>
+
+    <!-- AuthenticationFilter — protects all routes that require login -->
+    <filter>
+        <filter-name>AuthenticationFilter</filter-name>
+        <filter-class>com.c11.EventBooking.filter.AuthenticationFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthenticationFilter</filter-name>
+        <url-pattern>/admin/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AuthenticationFilter</filter-name>
+        <url-pattern>/Home</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AuthenticationFilter</filter-name>
+        <url-pattern>/Logout</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AuthenticationFilter</filter-name>
+        <url-pattern>/MyBookings</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AuthenticationFilter</filter-name>
+        <url-pattern>/Booking</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AuthenticationFilter</filter-name>
+        <url-pattern>/Profile</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AuthenticationFilter</filter-name>
+        <url-pattern>/Wishlist</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AuthenticationFilter</filter-name>
+        <url-pattern>/Events</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AuthenticationFilter</filter-name>
+        <url-pattern>/admin/messages</url-pattern>
+    </filter-mapping>
+
+    <!--
+        GuestFilter — redirects already-logged-in users away from
+        login and register pages.
+    -->
+    <filter>
+        <filter-name>GuestFilter</filter-name>
+        <filter-class>com.c11.EventBooking.filter.GuestFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>GuestFilter</filter-name>
+        <url-pattern>/Login</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>GuestFilter</filter-name>
+        <url-pattern>/Register</url-pattern>
+    </filter-mapping>
+
+    <!-- Welcome file — landing page served at root URL -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Session timeout: 30 minutes of inactivity -->
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+    <!--
+        Custom error pages — prevents raw stack traces reaching the browser.
+        isErrorPage="true" is set in each JSP so they can access
+        the implicit exception object if needed.
+    -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/views/public/error404.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/WEB-INF/views/public/error500.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>403</error-code>
+        <location>/WEB-INF/views/public/login.jsp</location>
+    </error-page>
+
+</web-app>
