@@ -1,4 +1,4 @@
-<!-- navbar-admin.jspf — admin sidebar; set activeNav before including -->
+<!--admin sidebar-->
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <div class="sidebar">
   <div class="sidebar-brand">

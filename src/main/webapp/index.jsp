@@ -109,7 +109,6 @@
 <section class="gallery-section" id="gallery">
     <div class="gallery-layout">
 
-        <%-- Heading inside the box --%>
         <div class="gallery-heading">
             <span class="badge">What we Create</span>
             <h2 class="section-heading">
@@ -118,7 +117,6 @@
             </h2>
         </div>
 
-        <%-- Images row --%>
         <div class="gallery-images">
             <div class="gallery-left">
                 <img src="${pageContext.request.contextPath}/images/event1.jpg"

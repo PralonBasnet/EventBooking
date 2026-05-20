@@ -106,7 +106,6 @@ nav .nav-brand-link:hover,
     overflow: hidden;
 }
 
-/* dark gradient so text is readable over the image */
 .hero-overlay {
     position: absolute;
     inset: 0;
@@ -296,7 +295,7 @@ nav .nav-brand-link:hover,
     margin-top: 10px;
 }
 
-/* two column layout - big image left, stacked images right */
+
 .gallery-images {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -488,7 +487,7 @@ nav .nav-brand-link:hover,
     text-align: center;
 }
 
-/* numbers strip just below the hero */
+
 .stats-banner {
     background: linear-gradient(
         135deg, #1e293b 0%, #0f172a 100%);
@@ -691,7 +690,6 @@ nav .nav-brand-link:hover,
     height: 100%;
 }
 
-/* shows when JS adds .open class */
 .dropdown-card {
     position: absolute;
     top: calc(100% + 8px);
@@ -772,7 +770,7 @@ nav .nav-brand-link:hover,
     color: #ef4444;
 }
 
-/* ===== RESPONSIVE ===== */
+/*RESPONSIVE */
 @media (max-width: 1024px) {
     .process-grid { grid-template-columns: repeat(2, 1fr); }
 }
