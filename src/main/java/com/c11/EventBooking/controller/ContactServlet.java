@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/** Handles the public contact form. */
+//Handles the public contact form. 
 @WebServlet("/Contact")
 public class ContactServlet extends HttpServlet {
 

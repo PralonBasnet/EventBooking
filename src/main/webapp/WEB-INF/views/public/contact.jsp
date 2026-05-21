@@ -65,7 +65,7 @@
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- FOOTER JSP -->
 <footer class="footer">
   <div>
     <p class="footer-brand">BookYourEvents</p>

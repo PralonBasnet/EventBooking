@@ -98,7 +98,7 @@
           </c:forEach>
         </div>
 
-        <!-- What to Expect strip -->
+        <!-- What to Expect strips -->
         <div class="venue-info-strip" style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:48px;">
           <div class="venue-info-card" style="background:#1a1a2e; border:1px solid rgba(91,141,238,0.25); border-radius:14px; padding:28px 24px; text-align:center;">
             <div class="venue-info-icon" style="font-size:2rem; margin-bottom:12px;">&#127881;</div>

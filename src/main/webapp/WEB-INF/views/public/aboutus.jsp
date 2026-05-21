@@ -14,7 +14,7 @@
 <c:set var="activeNav" value="about" scope="request"/>
 <%@ include file="/WEB-INF/views/includes/navbar-public.jspf" %>
 
-<!-- ABOUT HERO -->
+<!-- ABOUT HEROs -->
 <section class="about-hero">
     <span class="badge">Who We Are</span>
     <h1>The Art of <span>Extraordinary</span></h1>

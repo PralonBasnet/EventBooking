@@ -1,0 +1,79 @@
+<!-- navbar-public.jspf — shared public navbar; set activeNav before including -->
+<%@ taglib prefix="c"  uri="jakarta.tags.core" %>
+<%@ taglib prefix="fn" uri="jakarta.tags.functions" %>
+<c:set var="ctx" value="${pageContext.request.contextPath}"/>
+<nav class="navbar">
+
+  <c:choose>
+    <c:when test="${not empty sessionScope.user}">
+      <a href="${ctx}/Home" class="nav-brand-link" style="color:#fff !important; font-weight:800; text-decoration:none;">BookYourEvents</a>
+    </c:when>
+    <c:otherwise>
+      <a href="${ctx}/" class="nav-brand-link" style="color:#fff !important; font-weight:800; text-decoration:none;">BookYourEvents</a>
+    </c:otherwise>
+  </c:choose>
+
+  <div class="nav-center">
+    <a href="${ctx}/Events"  class="nav-link ${activeNav eq 'events'  ? 'active-link' : ''}">Events</a>
+    <a href="${ctx}/Venues"  class="nav-link ${activeNav eq 'venues'  ? 'active-link' : ''}">Venues</a>
+    <a href="${ctx}/About"   class="nav-link ${activeNav eq 'about'   ? 'active-link' : ''}">About</a>
+    <a href="${ctx}/Contact" class="nav-link ${activeNav eq 'contact' ? 'active-link' : ''}">Contact</a>
+  </div>
+
+  <div class="nav-right">
+    <c:choose>
+      <c:when test="${not empty sessionScope.user}">
+        <div class="profile-dropdown">
+          <button class="profile-btn" onclick="toggleDropdown(this)">
+            <span class="nav-avatar">
+              <c:choose>
+                <c:when test="${not empty sessionScope.user.profilePicture}">
+                  <img src="${ctx}/${sessionScope.user.profilePicture}"
+                       alt="avatar" class="nav-avatar-img" width="28" height="28">
+                </c:when>
+                <c:otherwise>
+                  <span class="nav-avatar-letter">
+                    <c:out value="${fn:substring(sessionScope.user.fullName, 0, 1)}"/>
+                  </span>
+                </c:otherwise>
+              </c:choose>
+            </span>
+            <c:out value="${sessionScope.user.fullName}"/> &#9660;
+          </button>
+          <div class="dropdown-card">
+            <div class="dropdown-avatar">
+              <c:choose>
+                <c:when test="${not empty sessionScope.user.profilePicture}">
+                  <img src="${ctx}/${sessionScope.user.profilePicture}"
+                       alt="Profile" class="dropdown-avatar-img"
+                       width="56" height="56">
+                </c:when>
+                <c:otherwise>
+                  <span class="dropdown-avatar-letter">
+                    <c:out value="${fn:substring(sessionScope.user.fullName, 0, 1)}"/>
+                  </span>
+                </c:otherwise>
+              </c:choose>
+            </div>
+            <p class="user-name"><c:out value="${sessionScope.user.fullName}"/></p>
+            <p class="user-email">@<c:out value="${sessionScope.user.userName}"/></p>
+            <c:if test="${sessionScope.user.userRole eq 'ADMIN'}">
+              <a href="${ctx}/admin/dashboard" class="dropdown-link">&#9638; Dashboard</a>
+            </c:if>
+            <a href="${ctx}/MyBookings" class="dropdown-link">My Bookings</a>
+            <a href="${ctx}/Wishlist"   class="dropdown-link">
+              Wishlist<c:if test="${not empty sessionScope.wishlist and sessionScope.wishlist.size() gt 0}">
+                (${sessionScope.wishlist.size()})</c:if>
+            </a>
+            <a href="${ctx}/Profile"    class="dropdown-link">Profile</a>
+            <a href="${ctx}/Logout"     class="dropdown-link logout">Sign Out</a>
+          </div>
+        </div>
+      </c:when>
+      <c:otherwise>
+        <a href="${ctx}/Login"    class="nav-link">Sign In</a>
+        <a href="${ctx}/Register" class="btn-contact">Register</a>
+      </c:otherwise>
+    </c:choose>
+  </div>
+</nav>

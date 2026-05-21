@@ -86,7 +86,7 @@ body::before {
     font-size: 14px;
 }
 
-/* shown after successful registration (Bug 3: pending approval message) */
+/* shown after successful registration */
 .success-message {
     color: #065f46;
     background: #d1fae5;

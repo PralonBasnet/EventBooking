@@ -22,7 +22,7 @@
   <p>Find and book events that match your style</p>
 </div>
 
-<!-- Search + events grid -->
+<!-- Search + events grids -->
 <section class="events-section">
   <div class="events-inner">
 

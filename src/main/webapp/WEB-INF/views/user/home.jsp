@@ -31,7 +31,7 @@
   </div>
 </section>
 
-<!-- MOST POPULAR EVENTS -->
+<!-- MOST POPULAR EVENT -->
 <section class="popular-section">
   <div class="popular-inner">
     <span class="badge">Trending</span>

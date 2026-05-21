@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-/** Loads all venues for the public venues pages. */
+// Loads all venues for the public venues pages. 
 @WebServlet("/Venues")
 public class PublicVenueServlet extends HttpServlet {
 

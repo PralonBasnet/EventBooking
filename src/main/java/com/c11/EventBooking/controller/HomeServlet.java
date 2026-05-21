@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/** Loads the home page with popular events. */
+// Loads the home page with popular events. 
 @WebServlet("/Home")
 public class HomeServlet extends HttpServlet {
 

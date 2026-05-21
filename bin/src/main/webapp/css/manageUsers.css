@@ -1,0 +1,60 @@
+/* manageUsers.css — supplemental styles for the admin user table */
+
+.role-badge, .status-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.role-ADMIN { background: #ede9fe; color: #5b21b6; }
+.role-USER  { background: #e0f2fe; color: #075985; }
+
+.status-ACTIVE    { background: #d1fae5; color: #065f46; }
+.status-SUSPENDED { background: #fee2e2; color: #991b1b; }
+/* Bug 3: PENDING badge — amber / warning tone */
+.status-PENDING   { background: #fef3c7; color: #92400e; }
+
+.btn-suspend {
+  background: #fee2e2;
+  color: #991b1b;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-suspend:hover { background: #fca5a5; }
+
+.btn-activate {
+  background: #d1fae5;
+  color: #065f46;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-activate:hover { background: #6ee7b7; }
+
+.self-label {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.btn-promote {
+  background: #7C3AED;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}

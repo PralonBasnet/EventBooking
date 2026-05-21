@@ -1,0 +1,46 @@
+<!-- navbar-admin.jspf — admin sidebar; set activeNav before including -->
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<div class="sidebar">
+  <div class="sidebar-brand">
+    <span class="brand-name">BookYourEvents</span>
+    <span class="brand-sub">Admin Panel</span>
+  </div>
+  <nav class="sidebar-nav">
+    <a href="${pageContext.request.contextPath}/admin/dashboard"
+       class="nav-item ${activeNav eq 'dashboard' ? 'active' : ''}">
+      &#9638; Dashboard
+    </a>
+    <a href="${pageContext.request.contextPath}/admin/events"
+       class="nav-item ${activeNav eq 'events' ? 'active' : ''}">
+      &#128197; Events
+    </a>
+    <a href="${pageContext.request.contextPath}/admin/venues"
+       class="nav-item ${activeNav eq 'venues' ? 'active' : ''}">
+      &#128205; Venues
+    </a>
+    <a href="${pageContext.request.contextPath}/admin/users"
+       class="nav-item ${activeNav eq 'users' ? 'active' : ''}">
+      &#128101; Users
+    </a>
+    <a href="${pageContext.request.contextPath}/admin/bookings"
+       class="nav-item ${activeNav eq 'bookings' ? 'active' : ''}">
+      &#127903; Bookings
+    </a>
+    <a href="${pageContext.request.contextPath}/admin/reports"
+       class="nav-item ${activeNav eq 'reports' ? 'active' : ''}">
+      &#9776; Reports
+    </a>
+    <a href="${pageContext.request.contextPath}/admin/messages"
+       class="nav-item ${activeNav eq 'messages' ? 'active' : ''}">
+      &#9993; Messages
+    </a>
+    <a href="${pageContext.request.contextPath}/Home" class="nav-item">
+      &#127968; Browse Site
+    </a>
+  </nav>
+  <div class="sidebar-footer">
+    <a href="${pageContext.request.contextPath}/Logout" class="nav-item signout">
+      &#9099; Sign Out
+    </a>
+  </div>
+</div>
