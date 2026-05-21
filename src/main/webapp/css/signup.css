@@ -15,7 +15,7 @@ body{
     background:url("../images/signup_background.png") center/cover no-repeat;
 }
 
-/* Dark overlay with blur on top of background */
+/* Dark overlay with blur on the top of background */
 body::before{
     content:"";
     position:fixed;

@@ -16,7 +16,7 @@
         <h1>Welcome Back</h1>
         <p class="subtitle">Sign in to manage your extraordinary events.</p>
 
-        <!-- Success message after registration -->
+        <!-- Success message after registrations -->
         <c:if test="${param.registered eq 'true'}">
             <p class="success-message">Account created! Please wait for admin approval before signing in.</p>
         </c:if>

@@ -12,7 +12,7 @@
 
 <div class="card">
 
-  <!-- Left panel: brand image -->
+  <!-- Left panel: brand ko image -->
   <div class="panel-left">
     <img src="${pageContext.request.contextPath}/images/signup_venue.png"
          class="venue-img" alt="Venue">

@@ -75,7 +75,7 @@ body::before {
     font-size: 15px;
 }
 
-/* shows if the user enters wrong credentials or account is not ACTIVE */
+/* shows if the user enters the  wrong credentials or account is not ACTIVE */
 .error-message {
     color: #dc2626;
     background: #fee2e2;

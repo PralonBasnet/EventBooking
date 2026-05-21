@@ -1,6 +1,6 @@
 package com.c11.EventBooking.util;
 
-/** Shared string helpers. */
+/** Shared the string helpers. */
 public final class StringUtils {
 
     private StringUtils() {}

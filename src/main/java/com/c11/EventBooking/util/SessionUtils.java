@@ -4,7 +4,7 @@ import com.c11.EventBooking.model.UserModel;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 
-/** Centralised session helper. */
+/** Centralized session helper. */
 public class SessionUtils {
 
     public static final String USER_KEY = "user";
