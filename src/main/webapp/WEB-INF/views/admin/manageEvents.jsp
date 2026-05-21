@@ -63,7 +63,6 @@
       <tbody>
         <c:choose>
 
-          <!-- If no events exist -->
           <c:when test="${empty events}">
             <tr>
               <td colspan="7" class="empty-msg">
