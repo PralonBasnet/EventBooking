@@ -21,7 +21,8 @@ public class EventServlet extends HttpServlet {
     private final EventDAO  eventDAO  = new EventDAO();
     private final VenueDAO  venueDAO  = new VenueDAO();
 
-    // ── doGet─//
+    //doGet 
+
     @Override
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response)
@@ -43,7 +44,7 @@ public class EventServlet extends HttpServlet {
         }
     }
 
-    // ── doPost ──//
+    //doPost
 
     @Override
     protected void doPost(HttpServletRequest request,
@@ -68,7 +69,7 @@ public class EventServlet extends HttpServlet {
         }
     }
 
-    // ── GET helpers ────//
+    // GET helpers
 
     private void loadEventsList(HttpServletRequest req, HttpServletResponse res)
             throws Exception {
@@ -105,8 +106,7 @@ public class EventServlet extends HttpServlet {
         res.sendRedirect(req.getContextPath() + "/admin/events?success=deleted");
     }
 
-    // ── POST helpers ───//
-
+    // POST helpers
     private void handleAdd(HttpServletRequest req, HttpServletResponse res)
             throws Exception {
 
@@ -171,7 +171,7 @@ public class EventServlet extends HttpServlet {
         res.sendRedirect(req.getContextPath() + "/admin/events?success=updated");
     }
 
-    // Returns an error message, or null if all fields are valid. 
+    //Returns an error message, or null if all fields are valid. 
     private String validateEventForm(String type, String priceStr,
                                      String date, String time, String venueIDStr) {
         if (isBlank(type))      return "Event type is required.";

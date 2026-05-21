@@ -201,7 +201,7 @@ label {
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
-/* action buttons row */
+/* action buttons */
 .form-actions {
   display: flex;
   justify-content: flex-end;

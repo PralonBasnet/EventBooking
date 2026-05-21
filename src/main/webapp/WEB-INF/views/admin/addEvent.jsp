@@ -5,19 +5,26 @@
 <head>
   <meta charset="UTF-8">
   <title>Add Event — BookYourEvents</title>
+
+  <!-- CSS file -->
   <link rel="stylesheet" href="${pageContext.request.contextPath}/css/addEvent.css">
 </head>
 <body class="admin-body">
 
 <c:set var="activeNav" value="events" scope="request"/>
+
+<!-- Admin navigation bar -->
 <%@ include file="/WEB-INF/views/includes/navbar-admin.jspf" %>
 
 <main class="main-content">
 
   <header class="topbar">
+
+    <!-- Back button -->
     <a href="${pageContext.request.contextPath}/admin/events" class="back-link">
       &#8592; Back to Events
     </a>
+
   </header>
 
   <section class="page-header">
@@ -25,6 +32,7 @@
     <p class="page-sub">Fill in the details to create a new event.</p>
   </section>
 
+  <!-- Error message -->
   <c:if test="${not empty error}">
     <div class="alert alert-error">
       &#9888; <c:out value="${error}"/>
@@ -32,6 +40,8 @@
   </c:if>
 
   <div class="form-container">
+
+    <!-- Event form -->
     <form action="${pageContext.request.contextPath}/admin/events"
           method="post" class="admin-form">
 
@@ -39,8 +49,10 @@
 
       <div class="form-grid">
 
+        <!-- Event type dropdown -->
         <div class="form-group">
           <label for="eventType">Event Type <span class="required">*</span></label>
+
           <select id="eventType" name="eventType" class="form-control" required>
             <option value="">-- Select Type --</option>
             <option value="Conference">Conference</option>
@@ -54,32 +66,43 @@
           </select>
         </div>
 
+        <!-- Venue dropdown -->
         <div class="form-group">
           <label for="venueID">Venue <span class="required">*</span></label>
+
           <select id="venueID" name="venueID" class="form-control" required>
             <option value="">-- Select Venue --</option>
+
+            <!-- Loop through available venues -->
             <c:forEach var="venue" items="${venues}">
               <option value="${venue.venueID}">
                 <c:out value="${venue.venueName}"/>
               </option>
             </c:forEach>
+
           </select>
         </div>
 
+        <!-- Event date -->
         <div class="form-group">
           <label for="eventDate">Event Date <span class="required">*</span></label>
+
           <input type="date" id="eventDate" name="eventDate"
                  class="form-control" required>
         </div>
 
+        <!-- Event time -->
         <div class="form-group">
           <label for="eventTime">Event Time <span class="required">*</span></label>
+
           <input type="time" id="eventTime" name="eventTime"
                  class="form-control" required>
         </div>
 
+        <!-- Event price -->
         <div class="form-group">
           <label for="eventPrice">Price (Rs.) <span class="required">*</span></label>
+
           <input type="number" id="eventPrice" name="eventPrice"
                  class="form-control"
                  placeholder="e.g. 250.00"
@@ -88,17 +111,26 @@
 
       </div>
 
+      <!-- Form buttons -->
       <div class="form-actions">
-        <a href="${pageContext.request.contextPath}/admin/events" class="btn-secondary">Cancel</a>
+
+        <a href="${pageContext.request.contextPath}/admin/events"
+           class="btn-secondary">
+          Cancel
+        </a>
+
         <button type="submit" class="btn-primary">
           + Create Event
         </button>
+
       </div>
 
     </form>
   </div>
 </main>
 
+<!-- JavaScript file -->
 <script src="${pageContext.request.contextPath}/js/app.js"></script>
+
 </body>
 </html>

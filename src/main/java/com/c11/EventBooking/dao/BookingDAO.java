@@ -48,7 +48,7 @@ public class BookingDAO {
         return b;
     }
 
-    // ── CREATE ───────────────────────────────────────────────────────────────
+    // CREATE
 
     // returns the generated bookingID so BookingServlet can pass it to the confirmation page
     public int insertBooking(Booking booking) throws SQLException {
