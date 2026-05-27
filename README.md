@@ -4,7 +4,7 @@ A Jakarta EE web application for booking events at venues, with a full admin app
 
 Built from scratch with servlets, JSP, and plain JDBC — no Spring, no Hibernate — to deeply understand the request lifecycle, MVC, and the DAO pattern.
 
-![EventBooking screenshot](docs/screenshot.png)
+![EventBooking screenshot](docs/Screenshot%202026-05-21%20132310.png)
 
 ## What it does
 
@@ -33,11 +33,18 @@ We deliberately avoided Spring and Hibernate. They're great in production, but u
 
 ## Project structure
 src/main/
-├── java/         # Servlets, models, DAOs, filters, utils
+├── java/
+│   ├── Servlets
+│   ├── Models
+│   ├── DAOs
+│   ├── Filters
+│   └── Utils
 └── webapp/
-├── WEB-INF/  # Configuration and protected JSPs
-├── css/      # Stylesheets (dark theme)
-└── *.jsp     # Views
+├── WEB-INF/
+│   └── web.xml
+├── css/
+│   └── styles.css (dark theme)
+└── *.jsp (views)
 
 ## Running locally
 
