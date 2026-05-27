@@ -1,10 +1,10 @@
-# EventBooking
+<img width="2558" height="1381" alt="Screenshot 2026-05-21 131419" src="https://github.com/user-attachments/assets/2abb26e8-f654-456e-8e29-4181da86485a" /># EventBooking
 
 A Jakarta EE web application for booking events at venues, with a full admin approval workflow.
 
 Built from scratch with servlets, JSP, and plain JDBC — no Spring, no Hibernate — to deeply understand the request lifecycle, MVC, and the DAO pattern.
 
-![EventBooking screenshot](docs/Screenshot%202026-05-21%20132310.png)
+![EventBooking screenshot](docs/screenshot.png)
 
 ## What it does
 
@@ -34,17 +34,18 @@ We deliberately avoided Spring and Hibernate. They're great in production, but u
 ## Project structure
 src/main/
 ├── java/
-│   ├── Servlets
-│   ├── Models
-│   ├── DAOs
-│   ├── Filters
-│   └── Utils
+│   ├── servlets/          # Request handlers (booking, admin, auth)
+│   ├── models/            # Event, Venue, Booking entities
+│   ├── dao/               # Data access objects (JDBC layer)
+│   ├── filters/           # Authentication filter
+│   └── utils/             # Helpers (password hashing, etc)
 └── webapp/
 ├── WEB-INF/
-│   └── web.xml
-├── css/
-│   └── styles.css (dark theme)
-└── *.jsp (views)
+│   ├── web.xml        # Servlet configuration
+│   └── jsp/           # Protected JSP pages
+├── css/               # Dark theme styles
+├── js/                # Client-side scripts
+└── index.jsp          # Home page
 
 ## Running locally
 
