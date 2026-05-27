@@ -1,4 +1,4 @@
-<img width="2558" height="1381" alt="Screenshot 2026-05-21 131419" src="https://github.com/user-attachments/assets/2abb26e8-f654-456e-8e29-4181da86485a" /># EventBooking
+# EventBooking
 
 A Jakarta EE web application for booking events at venues, with a full admin approval workflow.
 
