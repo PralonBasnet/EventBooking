@@ -4,7 +4,7 @@ A Jakarta EE web application for booking events at venues, with a full admin app
 
 Built from scratch with servlets, JSP, and plain JDBC — no Spring, no Hibernate — to deeply understand the request lifecycle, MVC, and the DAO pattern.
 
-![EventBooking screenshot](docs/screenshot.png)
+![EventBooking screenshot](docs/Screenshot.png)
 
 ## What it does
 
@@ -40,12 +40,12 @@ src/main/
 │   ├── filters/           # Authentication filter
 │   └── utils/             # Helpers (password hashing, etc)
 └── webapp/
-├── WEB-INF/
-│   ├── web.xml        # Servlet configuration
-│   └── jsp/           # Protected JSP pages
-├── css/               # Dark theme styles
-├── js/                # Client-side scripts
-└── index.jsp          # Home page
+    ├── WEB-INF/
+    │   ├── web.xml        # Servlet configuration
+    │   └── jsp/           # Protected JSP pages
+    ├── css/               # Dark theme styles
+    ├── js/                # Client-side scripts
+    └── index.jsp          # Home page
 
 ## Running locally
 
