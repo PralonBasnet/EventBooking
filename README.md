@@ -32,6 +32,8 @@ Built from scratch with servlets, JSP, and plain JDBC — no Spring, no Hibernat
 We deliberately avoided Spring and Hibernate. They're great in production, but using them on a learning project means you never really see how a web request is handled, how sessions work, or how a DAO maps rows to objects. Building this with plain servlets and JDBC forced me to understand the moving parts that frameworks usually hide.
 
 ## Project structure
+
+```
 src/main/
 ├── java/
 │   ├── servlets/          # Request handlers (booking, admin, auth)
@@ -46,28 +48,29 @@ src/main/
     ├── css/               # Dark theme styles
     ├── js/                # Client-side scripts
     └── index.jsp          # Home page
+```
 
 ## Running locally
 
 **Prerequisites:** Java 21, Maven, MySQL 8, Tomcat 10.1
 
 1. Clone the repo
-```bash
+   ```bash
    git clone https://github.com/PralonBasnet/EventBooking.git
    cd EventBooking
-```
+   ```
 
 2. Create the database
-```bash
+   ```bash
    mysql -u root -p < event_booking_db.sql
-```
+   ```
 
 3. Update database credentials in `src/main/resources/db.properties`
 
 4. Build the WAR
-```bash
+   ```bash
    mvn clean package
-```
+   ```
 
 5. Deploy `target/EventBooking.war` to Tomcat 10.1
 
@@ -81,3 +84,4 @@ src/main/
 - Consider exposing a REST API for a future mobile or React frontend
 
 ---
+
