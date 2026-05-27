@@ -1,7 +1,18 @@
+# Build output
 target/
-*.class
-*.war
-*.jar
+
+# Eclipse
+.settings/
 .classpath
 .project
-.settings/
+
+# IntelliJ
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
